@@ -1,0 +1,40 @@
+<div class="dash_pat">
+  <h1>PATIENT DASHBOARD : {{data._id}} </h1>
+</div>
+
+   <div class="row w-100 d-flex justify-content-center mt-3 mt-md-5 mt-sm-3 align-items-start main_div">
+       <div class="col-md-8 col-sm-10 justify-content-center mb-4">
+         <div class="card p-3">
+             <div>
+               <h5 class="card-title">Patient_id:{{data._id}}</h5>
+               <h6 class="card-subtitle mb-2 text-muted">Name: {{data.name}}</h6>
+               <h6 class="card-title text-danger">Email: {{data.email}}</h6>
+             </div>
+             <table class="table table-striped" id="{{data._id}}">
+                 <thead>
+                   <tr>
+                     <th scope="col">Disease</th>
+                     <th scope="col">Disease ID</th>
+                     <th scope="col">Doctor</th>
+                     <th scope="col">Details</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                 {{#each data.tests}}
+                   <tr>
+                     <th scope="row">{{this.title}}</th>
+                     <td>{{this.id}}</td>
+                     <th scope="row">{{this.supervisor_doctor}}</th>
+                     <td>
+                      <form method="GET" action="./{{this.title}}/{{this.id}}/">
+                        <button class="btn btn-info">Details</button>
+                      </form>
+                     </td>
+                 {{/each}}
+                 </tbody>
+               </table>
+           </div>
+         </div>
+       </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
