@@ -1,4 +1,4 @@
-# RAaS-IIT2019044
+# Online Disease Predictor and Prescription Model
 Project Repository for the Software Engineering Course.
 
 ### Contributors
@@ -6,6 +6,7 @@ Project Repository for the Software Engineering Course.
 Ritesh Raj - IIT2019025(RAJ)
 Ayan Pingle - IIT2019042  (Amenojikara)
 Shreesh Swaraj - IIT2019044
+Cifal shaul - IIT2019049
 ```
 
 ### Setting up Project
